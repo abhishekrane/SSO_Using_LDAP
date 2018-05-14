@@ -21,7 +21,7 @@ if (!empty($_POST)) {
  $pass=$_POST['pass'];
 
  
- $ldapconfig['host'] = '146.244.71.135';//CHANGE THIS TO THE CORRECT LDAP SERVER
+$ldapconfig['host'] = '146.244.71.135';//CHANGE THIS TO THE CORRECT LDAP SERVER
 $ldapconfig['port'] = '389';
 //$ldapconfig['basedn'] = 'dc=id,dc=sdsu,dc=edu';//CHANGE THIS TO THE CORRECT BASE DN
 //$ldapconfig['usersdn'] = 'ou=People';//CHANGE THIS TO THE CORRECT USER OU/CN
@@ -38,7 +38,7 @@ ldap_set_option($ds, LDAP_OPT_NETWORK_TIMEOUT, 10);
 $bind=ldap_bind($ds,$user,$pass);
 
 if($bind){
-	 include("disclaimer.php");//The page you wanna re-direct after login 
+    include("disclaimer.php");//The page you wanna re-direct after login 
     return TRUE;
 }
 else{
@@ -74,10 +74,7 @@ else
 }
 
 
-
 ?>
-
-
 
 
 </body>
